@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/activity_study_groups"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.m.hoth.StudyGroups"
+    android:background="#3284bf"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/heading"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+
+            <TextView
+                android:text="Bikini Bottom Squad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:textColor="#ffe800"
+                android:textSize="36sp"
+                android:textStyle="normal|bold"
+                android:textAlignment="center" />
+
+            <TextView
+                android:text="Study Group for CS 32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/courses"
+                android:textSize="18sp"
+                android:textColor="#ffe800"
+                android:layout_marginBottom="20dp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:text="ID: a1b2c3"
+                android:layout_height="wrap_content"
+                android:id="@+id/groupId"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:textColor="#ffe800"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:id="@+id/profileIcons"
+        android:gravity="center_horizontal"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.14">
+
+            <ImageView
+                app:srcCompat="@drawable/richard"
+                android:id="@+id/richardGroupIcon"
+                android:layout_weight="0.29"
+                android:layout_width="64dp"
+                android:layout_height="64dp" />
+
+            <TextView
+                android:text="Richard"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/richardName"
+                android:textColor="#ffe800"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.14">
+
+            <ImageView
+                app:srcCompat="@drawable/jared"
+                android:id="@+id/jaredGroupIcon"
+                android:layout_height="64dp"
+                android:layout_width="64dp"
+                android:layout_weight="0.23" />
+
+            <TextView
+                android:text="Jared"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/jaredName"
+                android:textColor="#ffe800"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:text="Schedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scheduleLabel"
+        android:textColor="#ffe800"
+        android:textSize="24sp"
+        android:layout_marginBottom="16dp"
+        android:textStyle="normal|bold" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#ffe800"/>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp">
+        <TableRow>
+            <TextView
+                android:text="Mondays"
+                android:textColor="#ffe800"
+                android:textSize="18sp"
+                android:padding="3dip" />
+            <TextView
+                android:text="11:00AM-1:00PM"
+                android:textColor="#ffe800"
+                android:textSize="18sp"
+                android:gravity="right"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Fridays"
+                android:textColor="#ffe800"
+                android:textSize="18sp"
+                android:padding="3dip" />
+            <TextView
+                android:text="10:00AM-2:00PM"
+                android:textColor="#ffe800"
+                android:textSize="18sp"
+                android:gravity="right"
+                android:padding="3dip" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:text="You are not in this group yet."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/notInGroup"
+        android:textSize="24sp"
+        android:textColor="#ffe800"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="JOIN GROUP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/findGroupsButton"
+        android:textColor="#3284bf"
+        android:background="#ffe800"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="searchResults"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp" />
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">HOTH</string>
+    <string name="title_activity_find_groups">FindGroups</string>
+    <string-array name="subjects_array">
+        <item>Computer Science</item>
+        <item>Mathematics</item>
+        <item>Physics</item>
+        <item>Chemistry</item>
+        <item>English</item>
+    </string-array>
+
+    <string-array name="cs_courses_array">
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+    </string-array>
+    <string name="title_activity_study_groups">StudyGroups</string>
+    <string name="title_activity_pied_piper">PiedPiper</string>
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/activity_find_groups"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.m.hoth.FindGroup"
+    android:background="#3284bf">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+        android:text="Find Groups"
+        android:layout_height="wrap_content"
+        android:id="@+id/findGroupsTitle"
+        android:textSize="36sp"
+        android:textColor="#ffe800"
+        android:textAlignment="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:text="Find study groups by searching for your class subject and class number."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/findGroupsTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:id="@+id/findGroupsDescription"
+            android:textColor="#ffe800"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:text="Subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/subjectLabel"
+                android:textSize="14sp"
+                android:textColor="#ffe800"
+                android:layout_below="@+id/findGroupsDescription"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subjectLabel"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/subjectMenu" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:text="Class Number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subjectMenu"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/classNumberLabel"
+                android:textColor="#ffe800" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/classNumberLabel"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/classNumberMenu" />
+        </LinearLayout>
+
+        <Button
+            android:text="SEARCH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/findGroupsButton"
+            android:textColor="#3284bf"
+            android:background="#ffe800"
+            android:textAlignment="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="searchResults"
+            android:layout_marginTop="20dp"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+</LinearLayout>
